@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet ToPoLM - IA Open Source Éthique</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --accent-color: #e74c3c;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        section {
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            color: var(--primary-color);
+            margin: 1.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-color);
+        }
+        h3 {
+            color: var(--dark-color);
+            margin: 1rem 0;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: var(--dark-color);
+            transform: translateY(-2px);
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .feature-card {
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+            background-color: var(--light-color);
+        }
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12px;
+            background-color: var(--light-color);
+            border: 4px solid var(--primary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            left: 50%;
+        }
+        .right::after {
+            left: -12px;
+        }
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .team-member {
+            background-color: var(--light-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        @media (max-width: 900px) {
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                margin-bottom: 2rem;
+            }
+            .timeline::after {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Projet ToPoLM</h1>
+            <p>Une IA open source éthique, transparente et accessible pour tous</p>
+            <a href="mailto:m.ulsas@gmail.com" class="btn">Rejoindre le projet</a>
+        </div>
+    </header>
+    <div class="container">
+        <section id="about">
+            <h2>Le Projet</h2>
+            <p>Le Projet ToPoLM vise à développer une alternative crédible et éthique aux solutions d'IA propriétaires comme ChatGPT, Grok ou Qwen. La mission est d'améliorer le modèle open source ToPoLM pour en faire une solution :</p>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Multilingue</h3>
+                    <p>Adaptation du modèle pour une performance optimale dans plusieurs langues, avec un accent particulier sur le français et d'autres langues européennes.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Éthique</h3>
+                    <p>Développement guidé par des principes éthiques clairs, en évitant les biais et en promouvant des valeurs inclusives.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Transparent</h3>
+                    <p>Code source ouvert, méthodologie documentée et explications détaillées du raisonnement.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Accessible</h3>
+                    <p>Utilisable par tous, indépendamment des compétences techniques ou des ressources disponibles.</p>
+                </div>
+            </div>
+            <h3>Capacités principales</h3>
+            <p>Le modèle ToPoLM possède des capacités impressionnantes qui en font une base idéale pour notre projet d'IA éthique. Ses principales forces incluent :</p>
+            <ul>
+                <li><strong>Raisonnement complexe</strong> : Capacité à comprendre et traiter des questions complexes avec un raisonnement structuré et logique</li>
+                <li><strong>Compréhension contextuelle avancée</strong> : Analyse fine du contexte permettant des réponses précises et nuancées</li>
+                <li><strong>Génération de contenu créatif et technique</strong> : Rédaction d'articles, de code, de résumés et de documents techniques de haute qualité</li>
+                <li><strong>Traitement multilingue</strong> : Base solide pour l'adaptation à plusieurs langues avec préservation des nuances culturelles</li>
+                <li><strong>Inférence mathématique et logique</strong> : Résolution de problèmes mathématiques et logiques avec des explications détaillées</li>
+                <li><strong>Transparence du raisonnement</strong> : Capacité à détailler son processus de réflexion et les sources de ses connaissances</li>
+                <li><strong>Adaptabilité aux domaines spécialisés</strong> : Facilité d'adaptation pour des usages spécifiques comme la médecine, l'éducation ou la recherche</li>
+            </ul>
+        </section>
+        <section id="why-topolm">
+            <h2>Pourquoi ToPoLM ?</h2>
+            <p>Le choix de ToPoLM comme base du projet n'est pas le fruit du hasard. Ce modèle présente plusieurs avantages stratégiques :</p>
+            <ul>
+                <li><strong>Architecture innovante :</strong> ToPoLM utilise une architecture transformer optimisée qui offre un excellent équilibre entre performance et efficacité.</li>
+                <li><strong>Licence véritablement open source :</strong> Contrairement à certains modèles prétendument "ouverts", ToPoLM permet une liberté totale d'adaptation et de redistribution.</li>
+                <li><strong>Potentiel multilingue :</strong> Bien que principalement entraîné sur des données anglophones, sa structure se prête particulièrement bien à l'extension vers d'autres langues.</li>
+                <li><strong>Communauté émergente :</strong> La communauté ToPoLM est en pleine croissance, permettant des collaborations fécondes avec chercheurs et développeurs.</li>
+                <li><strong>Empreinte carbone réduite :</strong> L'architecture efficiente de ToPoLM nécessite moins de ressources computationnelles que des modèles comparables, réduisant l'impact environnemental.</li>
+            </ul>
+            <p>L'approche envisagée vise non seulement à améliorer ses capacités existantes, mais aussi à étendre ses domaines d'application tout en préservant sa légèreté relative et son caractère éthique.</p>
+        </section>
+        <section id="roadmap">
+            <h2>Feuille de Route</h2>
+            <p>Le plan de développement s'articule autour d'étapes claires pour transformer ToPoLM en une solution complète et accessible.</p>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>Phase 1: Fondation</h3>
+                        <ul>
+                            <li>Constitution officielle de l'association</li>
+                            <li>Recherche active de partenariats</li>
+                            <li>Définition précise des critères éthiques</li>
+                            <li>Mise en place de l'infrastructure technique (serveurs, environnements de développement, pipelines d'entraînement)</li>
+                            <li>Hébergement sur un data center européen</li>
+                            <li>Développement d'un premier jeu de données en français</li>
+                            <li>Développement du site web</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>Phase 2: Développement</h3>
+                        <ul>
+                            <li>Entraînement sur corpus français</li>
+                            <li>Développement d'une interface utilisateur simplifiée</li>
+                            <li>Tests utilisateurs et ajustements</li>
+                            <li>Développement d'API pour intégration tierce</li>
+                            <li>Création d'une communauté de contributeurs</li>
+                            <li>Lancement du site web version bêta</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>Phase 3: Déploiement</h3>
+                        <ul>
+                            <li>Lancement version bêta publique</li>
+                            <li>Extension aux langues européennes et internationales</li>
+                            <li>Documentation complète pour développeurs</li>
+                            <li>Amélioration des capacités de raisonnement</li>
+                            <li>Événements de démonstration et formations</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>Phase 4: Pérennisation</h3>
+                        <ul>
+                            <li>Développement de versions spécialisées (éducation, recherche)</li>
+                            <li>Structure de gouvernance participative</li>
+                            <li>Élaboration d'un modèle économique viable à long terme</li>
+                            <li>Participation active à l'écosystème IA open source</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <h3>Actions prioritaires</h3>
+            <ol>
+                <li>Établir les partenariats techniques nécessaires pour l'infrastructure d'entraînement</li>
+                <li>Compiler des corpus de données en français de qualité pour l'apprentissage</li>
+                <li>Développer des métriques d'évaluation pour mesurer transparence et éthique</li>
+                <li>Créer un prototype fonctionnel en français</li>
+                <li>Sécuriser des financements initiaux pour soutenir le développement</li>
+            </ol>
+            <h3>Stratégie de communication</h3>
+            <ul>
+                <li><strong>Documentation sélective :</strong> Partage maîtrisé des avancées techniques</li>
+                <li><strong>Présence communautaire :</strong> Engagement dans les forums techniques et conférences d'IA</li>
+                <li><strong>Démonstrations ciblées :</strong> Sessions de présentation des fonctionnalités pour les partenaires potentiels</li>
+                <li><strong>Canaux numériques :</strong> Développement progressif d'une présence en ligne</li>
+                <li><strong>Partenariats académiques :</strong> Collaboration avec universités et centres de recherche</li>
+            </ul>
+        </section>
+        <section id="recruitment">
+            <h2>Rejoindre l'Équipe</h2>
+            <p>Le projet prévoit une phase de lancement de 12 à 24 mois, durant laquelle une équipe compétente et passionnée par l'IA éthique et open source sera constituée.</p>
+            <div class="team-member">
+                <h3>Porteur du projet</h3>
+                <p><strong>Mickaël ULSAS</strong> - Chef de projet et développeur principal</p>
+                <p>Formé pendant plusieurs mois à l'IA sur Google Colab pour comprendre le fonctionnement des modèles LLM, avec une expertise en prompting engineering.</p>
+            </div>
+            <h3>Profils recherchés</h3>
+            <ul>
+                <li><strong>Trésorier/ère :</strong> Expérience en comptabilité requise, gestion financière de l'association</li>
+                <li><strong>Secrétaire :</strong> Coordination administrative et communication interne</li>
+                <li><strong>Développeur/euse IA :</strong> Expérience significative en intelligence artificielle, des connaissances en cybersécurité seraient un plus</li>
+                <li><strong>Linguiste computationnel :</strong> Expert en traitement automatique des langues</li>
+                <li><strong>Responsable éthique :</strong> Définition et application des principes éthiques</li>
+            </ul>
+            <p><em>Note : Les postes salariés sont conditionnés à l'obtention de financements.</em></p>
+            <h3>Approche de financement</h3>
+            <p>Le projet sollicitera des financements publics et privés tout en maintenant son indépendance :</p>
+            <ul>
+                <li>Subventions de recherche et innovation</li>
+                <li>Partenariats avec les institutions académiques</li>
+                <li>Mécénat d'entreprises alignées avec les valeurs du projet</li>
+                <li>Financement participatif pour l'infrastructure</li>
+                <li>Services de conseil et formation</li>
+            </ul>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 Projet ToPoLM - Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
